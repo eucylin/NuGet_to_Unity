@@ -18,19 +18,11 @@ parser.add_argument("--dotnet-version",
 args = parser.parse_args()
 
 # default path
-platform = platform.system()
-if platform == "Linux" or platform == "Darwin":
-    nuget_path = f"/Users/cloudlin/Downloads/{args.nuget_package_name}"
-    dll_output_path = "/Users/cloudlin/Downloads/v2_dlls"
-    compatible_dotnet_version = "netstandard2.0"
-elif platform == "Windows":
-    nuget_path = f"{args.nuget_package_name}"
-    dll_output_path = "exported_dlls"
-    compatible_dotnet_version = "netstandard2.0"
+nuget_path = args.nuget_package_name
+dll_output_path = "exported_dlls"
+compatible_dotnet_version = "netstandard2.0"
 
 # if argument is specified, override the default path
-if args.nuget_path:
-    nuget_path = args.nuget_path
 if args.output_path:
     dll_output_path = args.output_path
 if args.dotnet_version:
