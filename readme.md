@@ -12,16 +12,16 @@ Download or Clone the [nuget_dll_copy.py](https://github.com/eucylin/NuGet_to_Un
 For macOS/Linux user, run following command in terminal:
 
 ```bash
-python3 ./nuget_dll_copy.py [nuget_package_name]
+$ python3 ./nuget_dll_copy.py [nuget_package_name]
 
 # for example, exported Google Translate package
-python3 ./nuget_dll_copy.py Google.Cloud.Translation.V2
+$ python3 ./nuget_dll_copy.py Google.Cloud.Translation.V2
 ```
 
-For Windows10, use commad below:
+For Windows10, use commad below in Powershell:
 
 ```bash
-py ./nuget_dll_copy.py [nuget_package_name]
+$ py ./nuget_dll_copy.py [nuget_package_name]
 ```
 
 After script executed finish, A folder named [nuget_package_name] will show up in the path you executed script.
