@@ -3,23 +3,22 @@ import sys
 from os import system
 import shutil
 import argparse
-import platform
 
 # CLI argument settings
 parser = argparse.ArgumentParser()
 parser.add_argument("nuget_package_name",
-                    help="the nuget package to export from, e.g. Newtonsoft.Json")
+                    help="the nuget package name to export from, e.g. Newtonsoft.Json")
 parser.add_argument(
-    "--nuget-path", help="The path to NuGet will download to, default is xxx")
+    "--nuget-path", help="The path where NuGet will download package to")
 parser.add_argument(
-    "--output-path", help="The path to export dll, default is xxx")
+    "--output-path", help="The path to export dll")
 parser.add_argument("--dotnet-version",
                     help="Must match the [Api Compatibility Level] in your Unity build settings, default is [netstandard2.0]")
 args = parser.parse_args()
 
-# default path
-nuget_path = args.nuget_package_name
-dll_output_path = "exported_dlls"
+# default path, it will be the same folder where you excute this script.
+nuget_path = f"{args.nuget_package_name}/source_package"
+dll_output_path = f"{args.nuget_package_name}/exported_dll"
 compatible_dotnet_version = "netstandard2.0"
 
 # if argument is specified, override the default path
