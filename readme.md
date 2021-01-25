@@ -28,6 +28,13 @@ After script executed finish, A folder named [nuget_package_name] will show up i
 
 There will be two folder inside it, copy the "exported_dlls" folder and place it in under your Unity project folder _Assets/Plugins_. That's it!
 
+If you wish to specified path and .Net version, use these arguments
+
+```bash
+# use custom path and .Net4.x version
+$ python3 ./nuget_dll_copy.py Google.Cloud.Translation.V2 --nuget-path ~/Downloads/G_Source --output-path ~/Downloads/G_Output --dotnet-version net4
+```
+
 # Reference
 
 You could also follow the link below to do these works manually. Result is the same, but may takes more time to copy the dll from each dependent package.
