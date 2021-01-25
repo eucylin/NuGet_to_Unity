@@ -3,7 +3,7 @@ A script that download NuGet package and exported dll which Unity can directly u
 # Prerequisites
 
 - [Python3](https://www.python.org/downloads/)
-- [Nuget CLI](https://docs.microsoft.com/zh-tw/nuget/consume-packages/install-use-packages-nuget-cli)
+- [Nuget CLI](https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-nuget-cli)
 
 # Usages
 
@@ -14,7 +14,7 @@ For macOS/Linux user, run following command in terminal:
 ```bash
 python3 ./nuget_dll_copy.py [nuget_package_name]
 
-// for example, exported Google Translate package
+# for example, exported Google Translate package
 python3 ./nuget_dll_copy.py Google.Cloud.Translation.V2
 ```
 
