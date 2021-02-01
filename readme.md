@@ -1,4 +1,4 @@
-A script that download NuGet package and exported dll which Unity can directly use.
+A simple script that download NuGet package and exported dll which Unity can directly use.
 
 # Prerequisites
 
