@@ -35,6 +35,10 @@ If you wish to specified path and .Net version, use these arguments
 $ python3 ./nuget_dll_copy.py Google.Cloud.Translation.V2 --nuget-path ~/Downloads/G_Source --output-path ~/Downloads/G_Output --dotnet-version net4
 ```
 
+optional:
+
+If you use IL2CPP as scripting backend and the nuget package make use of C# reflections. You probably need to create a `link.xml` file to avoid compile error in builds. Follow the document below to create your own xml file.
+
 # Reference
 
 You could also follow the link below to do these works manually. Result is the same, but may takes more time to copy the dll from each dependent package.
